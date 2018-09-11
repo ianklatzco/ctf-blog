@@ -5,7 +5,10 @@ date: 2018-09-10 21:38:00 -0500
 published: true
 ---
 
-I was working on TokyoWesterns 2018 `load` and [this came up (stackoverflow)](https://stackoverflow.com/a/41800308/1234621).
+I was working on TokyoWesterns 2018 `load` and [this came up
+(stackoverflow)](https://stackoverflow.com/a/41800308/1234621). Sebastian
+and I both tried identifying main this way and scratched our heads at why
+this approach wasn't working, so I'm taking a second stab at it now.
 
 I don't actually know what `strip()` does so let's `man strip`:
 ```
@@ -84,7 +87,8 @@ the solution is to pull out the entry point manually and then break on that.
 
 And with that, we can see that `rdi` contains `0x400816`, which is main. (had a
 brief moment of confusion where I didn't realize that I was x64 and x64 is
-register-based arguments).
+register-based arguments). So, that confusion is likely what got us during
+the CTF as well.
 
 ---
 
