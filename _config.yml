@@ -16,7 +16,7 @@
 title: ctf_blog
 email: 
 description: > # this means to ignore newlines until "baseurl:"
-  writeups and research.
+  writeups and research. generally more stream-of-thought style writing than main blog, since it's collecting my thoughts.
 baseurl: "ctf-blog" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: 
