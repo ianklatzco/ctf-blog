@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Locating main() in a stripped binary"
+title: "Locating main() in a stripped & dynamically linked binary"
 date: 2018-09-10 21:38:00 -0500
 published: true
 ---
@@ -8,7 +8,8 @@ published: true
 I was working on TokyoWesterns 2018 `load` and [this came up
 (stackoverflow)](https://stackoverflow.com/a/41800308/1234621). Sebastian
 and I both tried identifying main this way and scratched our heads at why
-this approach wasn't working, so I'm taking a second stab at it now.
+this approach wasn't working, so I'm taking a second stab at it now. Note
+that the binary is both 64b and dynamically linked.
 
 I don't actually know what `strip()` does so let's `man strip`:
 ```
