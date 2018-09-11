@@ -22,7 +22,7 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: 
 github_username: 
 
-permalink: /ctf-blog/:title # no datestamps
+permalink: /:title # no datestamps
 
 # Build settings
 markdown: kramdown
