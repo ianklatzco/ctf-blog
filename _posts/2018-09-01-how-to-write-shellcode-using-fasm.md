@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "how to write shellcode using fasm"
+title: "writing shellcode using fasm"
 date: 2018-09-01 14:01:00 -0500
 published: true
 ---
