@@ -5,6 +5,12 @@ date: 2018-09-10 21:38:00 -0500
 published: true
 ---
 
+Learned:
+* stripped binaries don't point to main
+* binja can find it anyway
+* the dynamic linker runs before any of your program code
+* trying `break _start` in gdb will probably hit the linker's instead
+
 I was working on TokyoWesterns 2018 `load` and [this came up
 (stackoverflow)](https://stackoverflow.com/a/41800308/1234621). Sebastian
 and I both tried identifying main this way and scratched our heads at why
