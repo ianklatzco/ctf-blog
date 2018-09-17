@@ -7,6 +7,17 @@ published: true
 
 [via][1]
 
+Sometimes you want to pipe things into a process's stdin (to emulate typing
+things, for example.)
+```
+echo "blah" | binary
+python -c "print hewwo" | binary # is another common thing.
+```
+
+But what if you want to do that with a process you're starting via gdb?
+Gets a little more complicated, but gdb has things built in to do such
+things.
+
 ```
 # run it in a subshell and get the stdout fd
 r < <(python -c "print '\x41'*36" | binary)
