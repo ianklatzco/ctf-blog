@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "passing std to a process in gdb"
+title: "passing to a process's stdin in gdb"
 date: 2018-09-16 17:07:00 -0500
 published: true
 ---
