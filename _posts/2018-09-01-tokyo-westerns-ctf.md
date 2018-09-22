@@ -5,6 +5,8 @@ date: 2018-09-01 14:01:00 -0500
 published: true
 ---
 
+**Not a complete writeup, just my thoughts while working on it.**
+
 ## Load
 At first glance, it looks like it's nontrivial to locate `main()` in a
 stripped ELF.
@@ -71,6 +73,11 @@ Misc other stuff:
  * `/proc/self/mem` gives us arbitrary memory, but we don't actually see the output ever so that's nothing.
  * .got.plt and .plt.got are two separate things. .plt.got has AX, .got.plt has WA. `readelf -S` for sections.
 
+---
+
+Post-competition, looks like one solution is reading a character of the
+flag at a time and terminating on match, hanging on mismatch. Thus you leak
+the entire flag. Interesting!
 
 [0]: https://stackoverflow.com/questions/9885545/how-to-find-the-main-functions-entry-point-of-elf-executable-file-without-any-s
 [1]: https://en.wikipedia.org/wiki/X86_calling_conventions#List_of_x86_calling_conventions
