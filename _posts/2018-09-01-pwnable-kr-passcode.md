@@ -5,6 +5,12 @@ date: 2018-09-01 18:01:00 -0500
 published: true
 ---
 
+* Partial RELRO means you can do GOT overwrites.
+* Full RELRO blocks them (marks the page as read-only after symbol
+resolution)
+
+---
+
 Learned a lot from
 https://systemoverlord.com/2017/03/19/got-and-plt-for-pwning.html and
 https://www.akashtrehan.com/writeups/pwnablekr_todders_bottle/.
