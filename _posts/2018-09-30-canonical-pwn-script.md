@@ -26,3 +26,8 @@ p.interactive() # look we got a shell
 # so as to enable you to actually use the shell.
 cat <(python solve.py) - | ./binary
 ```
+
+```
+# int to little endian, in pwn but sometimes i don't have it installed
+def p32(x): return struct.pack('<I',x)
+```
