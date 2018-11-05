@@ -116,6 +116,8 @@ Continuing.
 Breakpoint 1, 0x00000000004006be in ?? ()
 1: /c $rdx = 70 'F'
 (gdb) cmds set $rip=0x4006d6 ; c
+
+... truncated
 ```
 
 Nice and quick.
