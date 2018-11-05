@@ -10,7 +10,7 @@ way into. [Download link](https://www.dropbox.com/s/d1v6a5708cwzzs5/old-oaken-bu
 
 The interesting block is pretty clear (it's the longest and it's in main):
 
-<img width='100%' src='/images/old-oaken-bucket.png'>
+<img width='100%' src='/ctf-blog/images/old-oaken-bucket.png'>
 
 Reversing it by hand looks tedious. `cdq` is just "convert doubleword to
 quadword" with a sign extend.
