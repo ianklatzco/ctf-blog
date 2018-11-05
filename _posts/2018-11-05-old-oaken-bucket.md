@@ -80,11 +80,13 @@ way. Pretty much just a coincidence.
 
 But, that's not fast enough. We can do better.
 
+---
+
 GDB doesn't have command separation built in (it honestly leaves a lot to
 be desired from the "works like a nice shell" standpoint). We can [hack it
 in with Python](https://stackoverflow.com/a/51804606/1234621).
 
-Now, we just need to set a breakpoint on the `cmp and:
+Now, we just need to set a breakpoint on the `cmp` and:
 
 1. `cmds set $rip=0x4006d6 ; c`
 2. Mash up+enter.
