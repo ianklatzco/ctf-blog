@@ -17,25 +17,27 @@ First, install r2 on Linux. `git clone https://github.com/radare/radare2 && cd r
 
 Get the challenge file in your Linux environment. You can download it with `wget http://sigpwny.com/files/3301150f65f62f644f09b5b4710e2bd4/how2re`.
 
-1. Open the binary in r2. `r2 how2re`
-2. r2 likes to print amusing startup messages. For example, I got ` -- How about a nice game of chess?` which is a reference to the movies War Games. You can ignore or disable these.
-3. Press `v` and then `Enter` to enter visual mode. It should look like this:
+Open the binary in r2. `r2 how2re`
+
+* r2 likes to print amusing startup messages. For example, I got ` -- How about a nice game of chess?` which is a reference to the movies War Games. You can ignore or disable these.
+
+Press `v` and then `Enter` to enter visual mode. It should look like this:
 
 <img width='100%' src='/ctf-blog/images/r2/0.png'>
 
-5. Press `p` to rotate "print mode". Press `P` if you want to go back. You should now see disassembly, which is enough to start reverse engineering the binary.
+Press `p` to rotate "print mode". Press `P` if you want to go back. You should now see disassembly, which is enough to start reverse engineering the binary.
 
 <img width='100%' src='/ctf-blog/images/r2/1.png'>
 
-6. Press `n` and `N` to navigate back and forth between sections. Stop when you reach `main`.
+Press `n` and `N` to navigate back and forth between sections. Stop when you reach `main`.
 
 <img width='100%' src='/ctf-blog/images/r2/2.png'>
 
-7. Press `df` to define a function at main. (This isn't always necessary).
+Press `df` to define a function at main. (This isn't always necessary).
 
 <img width='100%' src='/ctf-blog/images/r2/3.png'>
 
-8. Press `V` to enter visual mode. (`q` to go back). Navigate with `hjkl` (vim-style).
+Press `V` to enter visual mode. (`q` to go back). Navigate with `hjkl` (vim-style).
 
 <img width='100%' src='/ctf-blog/images/r2/4.png'>
 
