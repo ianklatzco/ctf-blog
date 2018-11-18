@@ -11,12 +11,21 @@ I'm going to try keeping up my "current favorite pwn scripts" here.
 ```
 from pwn import *
 
+# change logging level. options: debug, critical (high, low)
+context.log_level = 'critical'
+
 p = process("./path")
-print util.proc.pidof(p) # useful with a pause() to connect gdb if pwnlib's gdb isn't working for whatever reason
+# p = remote('host', 3333)
+
+# useful with a pause() to connect gdb if pwnlib's gdb isn't working for
+# whatever reason
+# print util.proc.pidof(p) 
 
 p.send("banana")
 p.recv() # p sure this is capped at 4096 bytes or something
 p.sendline("this sends a newline after")
+
+# p.recvall()
 
 p.interactive() # look we got a shell
 ```
