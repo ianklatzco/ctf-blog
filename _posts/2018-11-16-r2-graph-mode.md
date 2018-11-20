@@ -9,13 +9,14 @@ published: true
 
 Radare2 is a vim-like reverse engineering tool. It is free. Your other options are Binary Ninja and IDA, which cost money for anything other than 32 bit binaries. They are substantially easier to learn and use.
 
-Here I'll walk through an alternative way to solve [how2re](http://sigpwny.com/challenges#how2re) from the one we went over during the meeting.
+Here I'll walk through an alternative way to solve [how2re](http://ctf.sigpwny.com/challenges#how2re) from the one we went over during the meeting.
 
 ---
 
 First, install r2 on Linux. `git clone https://github.com/radare/radare2 && cd radare2 && sys/install.sh` (Windows Subsystem for Linux, Ubuntu is recommended, or contact me if you'd like server access.)
 
-Get the challenge file in your Linux environment. You can download it with `wget http://sigpwny.com/files/3301150f65f62f644f09b5b4710e2bd4/how2re`.
+Get the challenge file in your Linux environment. You can download it with
+`wget http://ctf.sigpwny.com/files/3301150f65f62f644f09b5b4710e2bd4/how2re`.
 
 Open the binary in r2. `r2 how2re`
 
