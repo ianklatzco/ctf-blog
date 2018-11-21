@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "radare2 basics"
-date: 2018-11-05 00:02:00 -0500
+date: 2018-11-16 15:01:53 -0500
 published: true
 ---
 
