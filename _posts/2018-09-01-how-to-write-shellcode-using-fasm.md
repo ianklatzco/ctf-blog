@@ -5,6 +5,8 @@ date: 2018-09-01 14:01:00 -0500
 published: true
 ---
 
+[Small binary file containing only shellcode](https://klatz.co/ctf-blog/x86_32-execve-shellcode)
+
 ```
 apt install fasm -y
 ```
