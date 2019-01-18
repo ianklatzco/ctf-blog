@@ -58,7 +58,7 @@ Connect to the server.
 
 Get the [challenge files](http://ctf.sigpwny.com/challenges#leakme). Open the source file [in your browser](http://ctf.sigpwny.com/files/5c7e2aa342fba517ba71253d57a3eac2/leakme.c) or a text editor of choice.
 
-*backup challenge files [leakme.c](files/uw-printf/leakme.c) [leakme (binary)](files/uw-printf/leakme)*
+*backup files [leakme.c](files/uw-printf/leakme.c) [leakme (binary)](files/uw-printf/leakme)*
 
 Download the binary on the server:
 ```bash
