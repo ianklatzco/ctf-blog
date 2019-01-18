@@ -79,11 +79,11 @@ Holy hello, Batman!
 Hey, what number am I thinking of?
 69
 Nope!
-ian@underclassmen-vm:~$
+ian@underclassmen-vm:~$ # nice
 ```
 
 ### The vulnerability
-Here is the interesting line of source code (with a little editing to highlight the important parts:
+Here is the interesting line of source code:
 ```c
 void echo(){
     // edited for clarity
@@ -470,6 +470,8 @@ BatCTF{xxxxxxxxxxxxxxxxxxxx} # REDACTED
 ```
 
 Submit the flag on [ctf.sigpwny.com][2] and give yourself a pat on the back.
+
+Try `leakme_short`! The same approach should work. Probably.
 
 
 [1]: https://eli.thegreenplace.net/2011/09/06/stack-frame-layout-on-x86-64
