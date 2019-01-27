@@ -20,12 +20,15 @@ things.
 
 ```
 # run it in a subshell and get the stdout fd
-r < <(python -c "print '\x41'*36" | binary)
+gdb binary
+r < <(python -c "print '\x41'*36")
 ```
 
 ```
 # bash command substitution into how gdb does stdin
 r <<< $(python -c "print '\x41'*36")
+# note! this handles nulls weirdly on stdin within gdb. (leakless, fireshellctf)
+# the above did not have this issue.
 ```
 
 [1]: https://dustri.org/b/feed-binary-stdin-from-inside-gdb.html 
