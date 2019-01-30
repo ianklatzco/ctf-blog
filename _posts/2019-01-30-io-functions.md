@@ -7,8 +7,16 @@ published: true
 
 Manners of getting input. From memory, maybe more later.
 
+x86, 32 & 64b.
+
 `read from stdin to a buffer`: Will read any character (incl. nulls).
 
 `fgets`: reads up to n-1. terminates on nulls. adds a newline.
 
 `getc in a while() loop`: probably my least favorite.
+
+`mmap()`
+
+`port mapped io`: x86 instructions `in` and `out`
+
+`mmio`
