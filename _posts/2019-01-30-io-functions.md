@@ -13,6 +13,8 @@ x86, 32 & 64b.
 
 `fgets`: reads up to n-1. terminates on nulls. adds a newline.
 
+`scanf`: varargs. takes a format string specifier, eg `scanf("%9s", mem_loc);`.
+
 `getc in a while() loop`: probably my least favorite.
 
 `mmap()`
