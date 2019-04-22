@@ -6,8 +6,9 @@ published: true
 ---
 
 I spent a disproportionately large amount of time solving the first portion
-of this binary, because I was having a lot of fun learning things via it. I
-did not solve anything past the first function.
+of this binary, because I was having fun learning things via it. I
+did not solve anything past the first function, but hoo boy, there's a great
+pleasure in diving really deeply into a small problem and learning a lot.
 
 We are given a pwn binary that asks for a magic value and runs through six
 obfuscated constraints. It reads from stdin, stores the ASCII, `strtol`s
