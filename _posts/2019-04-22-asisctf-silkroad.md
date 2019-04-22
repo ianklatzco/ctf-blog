@@ -9,9 +9,9 @@ I spent a disproportionately large amount of time solving the first portion
 of this binary, because I was having a lot of fun learning things via it. I
 did not solve anything past the first function.
 
-We are given a PWN binary that asks for a magic value and runs through six
-obfuscated constraints. It reads the value in, stores the ASCII, `strtol`s
-it, and `strlen`s it.
+We are given a pwn binary that asks for a magic value and runs through six
+obfuscated constraints. It reads from stdin, stores the ASCII, `strtol`s
+(str to long int) it, and `strlen`s it.
 
 I ultimately made a Python script that finds the value efficiently, and a C
 harness that instruments a function from the binary and iterates through
@@ -21,8 +21,8 @@ Interestingly, I tried a case that the designer may not have considered:
 leading 0s on the input change the `strlen` result in such a way that it's
 possible to cause the remote binary to run into a divide by 0 exception.
 
-Here's [my code in a GitHub gist][2] for easy viewing. All of the files I
-used are [here][1].
+Here's [my code in a GitHub gist][2] for easy viewing. All of the
+files I created / used are [here][1].
 
 ---
 
@@ -65,6 +65,15 @@ changed in the harness binary (`iterate`). I did this a lot. It wasn't fun.
 There's probably a good way to do this with a Python library to read the
 ELF and ask for the address of those functions, then construct & assemble
 the `jmp` instruction and write it to an offset in `bin`.
+
+I had a really weird issues where I'd `jmp` to the loaded code, hit `ni`,
+and gdb would run until a segfault. I asked a few friends and they helped
+me realize that I was running into some difference between `ni` and `si` —
+doing `ni` would continue out of the function until segfaulting later,
+unless I stepped in a few instructions first. I'm not sure what the reason
+is, but my guess is that GDB has some heuristic for determining if you're
+in a function or not, and that landing on the first instruction after a
+call in my weird mmappy situation didn't set up those heuristics correctly.
 
 After a lot of tedious debugging, I ended up with a statically compiled
 binary `iterate` that pretty quickly (<1m) finds the value. I used this to
