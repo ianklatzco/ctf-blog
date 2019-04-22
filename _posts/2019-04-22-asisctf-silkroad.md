@@ -74,6 +74,7 @@ unless I stepped in a few instructions first. I'm not sure what the reason
 is, but my guess is that GDB has some heuristic for determining if you're
 in a function or not, and that landing on the first instruction after a
 call in my weird mmappy situation didn't set up those heuristics correctly.
+If you have any idea why, @ me on twitter or something.
 
 After a lot of tedious debugging, I ended up with a statically compiled
 binary `iterate` that pretty quickly (<1m) finds the value. I used this to
