@@ -5,6 +5,24 @@ date: 2018-11-05 00:02:00 -0500
 published: true
 ---
 
+### PEDA may be useful
+It's a script that makes gdb easier to use (run these in your shell)
+```bash
+git clone https://github.com/longld/peda.git ~/peda
+echo "source ~/peda/peda.py" >> ~/.gdbinit
+echo "DONE! debug your program with gdb and enjoy"
+```
+
+### Some GDB basics you'll need
+* `gdb old-oaken-bucket`
+* `disas * 0x4005f6`
+* `break * 0x4005f6` break on the main function
+* `run AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA` # starts the program and runs until it hits the breakpoint
+* `ni` # next instruction -- steps in assembly.
+* `c` continue until the next breakpoint or the program ends
+
+---
+
 Simple reversing challenge from an internal Purdue ctf that i \*ahem\*'d my
 way into. [Download link](https://www.dropbox.com/s/d1v6a5708cwzzs5/old-oaken-bucket?dl=0).
 
