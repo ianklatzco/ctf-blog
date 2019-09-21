@@ -15,8 +15,7 @@ echo "DONE! debug your program with gdb and enjoy"
 
 ### Some GDB basics you'll need
 * `gdb old-oaken-bucket`
-* `disas * 0x4005f6`
-* `break * 0x4005f6` break on the main function
+* `break * 0x4005f6` set a breakpoint on the main function. the binary is stripped, if you're curious why read [this](https://klatz.co/ctf-blog/locating-main-in-stripped-binary)
 * `run AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA` # starts the program and runs until it hits the breakpoint
 * `ni` # next instruction -- steps in assembly.
 * `c` continue until the next breakpoint or the program ends
