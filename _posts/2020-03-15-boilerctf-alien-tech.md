@@ -127,3 +127,7 @@ var nine = Module["nine"] = function() {
 ```
 
 ... writing C in JS is definitely one of the weirder things that I've done.
+
+### Next time
+Figure out imports and GDB it.
+[youtube](https://www.youtube.com/watch?v=PevI_Mn-UUE)
