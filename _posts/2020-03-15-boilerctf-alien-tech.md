@@ -20,7 +20,7 @@ was immensely helpful.
 
 To solve:
 1. Reverse the binary to learn that there's a username `N Gonzalez`.
-2. Send the username and any password. Notice there is a new `Progress`
+2. Send the username and any password (HTTP Basic Auth, so `b64(user:pass)`). Notice there is a new `Progress`
 HTTP header from the server than sends back an int (starting at 1).
 3. Brute force the password using the `Progress` header -- when it goes up,
 you have the correct character of the flag.

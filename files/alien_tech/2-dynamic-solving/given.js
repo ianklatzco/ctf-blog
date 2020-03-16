@@ -2126,18 +2126,6 @@ var _main = Module["_main"] = function() {
   return Module["asm"]["main"].apply(null, arguments)
 };
 
-var nine = Module["nine"] = function() {
-  assert(runtimeInitialized, 'you need to wait for the runtime to be ready (e.g. wait for main() to be called)');
-  assert(!runtimeExited, 'the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)');
-  return Module["asm"]["nine"].apply(null, arguments)
-};
-
-var eight = Module["eight"] = function() {
-  assert(runtimeInitialized, 'you need to wait for the runtime to be ready (e.g. wait for main() to be called)');
-  assert(!runtimeExited, 'the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)');
-  return Module["asm"]["eight"].apply(null, arguments)
-};
-
 /** @type {function(...*):?} */
 var ___errno_location = Module["___errno_location"] = function() {
   assert(runtimeInitialized, 'you need to wait for the runtime to be ready (e.g. wait for main() to be called)');
@@ -2395,19 +2383,6 @@ function callMain(args) {
 
   var entryFunction = Module['_main'];
 
-  // var runMe = Module['asm']['nine'].apply(null, arguments);
-  // var runMe = Module['asm']['nine'];
-
-  // var ret = eight();
-
-  var arg1 = btoa('N Gonzalez:pctf{but_does_it_run_doom_yet}');
-  var arg2 = btoa('N Gonzalez:pctf{');
-  var p1 = allocateUTF8OnStack(arg1);
-  var p2 = allocateUTF8OnStack(arg2);
-
-  var ret = nine(p1, p2);
-  exit(ret, /* implicit = */ true);
-
   args = args || [];
 
   var argc = args.length+1;
@@ -2580,6 +2555,8 @@ if (Module['noInitialRun']) shouldRunNow = false;
 
   noExitRuntime = true;
 
+// This is what the webapp itself is doing, but you can't really guess 
+// that from the binary itself.
 arguments_.push(btoa('N Gonzalez:pctf{but_does_it_run_doom_yet}'));
 arguments_.push(btoa('N Gonzalez:pctf'));
 
