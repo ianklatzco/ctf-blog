@@ -1,0 +1,20 @@
+using the emscripten test harness appears to call main with an argc of 1
+
+
+hm, if i got thru f9 with a partic input, i should go check that CMP to see if it's promising.
+	well i tried that, and got browser lag again. what's interesting is that
+	it actually appears to be using fd.write, so if i make that a console.log it'll spit things out.
+	seems to be two adjacent memlocs.
+
+
+one of the functions interfaces w N Gonzalez (11) but i'm not sure what it does.
+it clearly scans over that memory.
+
+// how can we cause function11 to return 0?
+well, the 2nd pushed arg influences it, and it gives a memloc at 8chars but that might be coincidence.
+
+learned: i had some issues figuring out how to pass things to main correctly.
+argc == 1 for calls to main without anything.
+
+curl -i --user 'N Gonzalez:password' http://web.ctf.b01lers.com:1005/
+single-quoting the entire string is fine
