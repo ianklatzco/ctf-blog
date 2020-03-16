@@ -5,6 +5,8 @@ date: 2020-03-15 20:44:14 -0700
 published: true
 ---
 
+**[Files](https://github.com/ianklatzco/ctf-blog/tree/master/files/alien_tech)**
+
 I got about halfway through this challenge before getting stuck. I ended up
 asking the organizers for the intended solve after the competition ended,
 at which point I quickly solved it.
@@ -95,6 +97,8 @@ Frankly, it probably would've been easier to figure out compiling it to a
 working x86 binary and then just GDB'd that until things made sense.
 
 ### Addendum: Calling WASM functions directly from the JS console
+That being said, you can get the same, albeit janky,
+call-whatever-you-want-in-wasm behavior that you might want from GDB.
 It's totally possible with a little poking around. See
 `3-can-you-export-anything-you-want` in git repo.
 
@@ -119,6 +123,7 @@ var nine = Module["nine"] = function() {
 
   var ret = nine(p1, p2);
   exit(ret, /* implicit = */ true);
+  // see console for the return val
 ```
 
 ... writing C in JS is definitely one of the weirder things that I've done.
