@@ -61,7 +61,7 @@ I realized it was far more than was reasonable to reverse. At this point, I
 should've tested the username and noticed the `Progress` header, but I
 tried learning more about the binary by running it.
 
-### Down the rabbit hole we go (solving dynamically)
+### Down the wabt hole we go (solving dynamically)
 
 I set up the required HTML and JS to run WebAssembly. However, I got
 the arg passing wrong, so I kept crashing my tab because argv held illegal
