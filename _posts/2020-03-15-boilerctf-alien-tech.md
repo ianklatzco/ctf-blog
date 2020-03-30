@@ -131,3 +131,7 @@ var nine = Module["nine"] = function() {
 ### Next time
 Figure out imports and GDB it.
 [youtube](https://www.youtube.com/watch?v=PevI_Mn-UUE)
+
+[A few different ways of
+loading](https://developers.google.com/web/updates/2018/04/loading-wasm), that demonstrate how to re-use the module
+(say, you want to run it multiple times).
