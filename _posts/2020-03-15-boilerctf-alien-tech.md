@@ -7,7 +7,7 @@ published: true
 
 **[Files](https://github.com/ianklatzco/ctf-blog/tree/master/files/alien_tech)**
 
-I got about halfway through this challenge before getting stuck. I ended up
+This challenge had 0 solves, probably because it was for a smaller CTF and had a difficult logical jump. I got about halfway through this challenge before getting stuck. I ended up
 asking the organizers for the intended solve after the competition ended,
 at which point I quickly solved it.
 
