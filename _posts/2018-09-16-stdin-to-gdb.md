@@ -11,7 +11,7 @@ Sometimes you want to pipe things into a process's stdin (to emulate typing
 things, for example.)
 ```
 echo "blah" | binary
-python -c "print hewwo" | binary # is another common thing.
+python -c "print hello" | binary # is another common thing.
 ```
 
 But what if you want to do that with a process you're starting via gdb?
